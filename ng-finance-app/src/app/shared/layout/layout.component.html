@@ -1,0 +1,191 @@
+<p>layout works!</p>
+<mat-sidenav-container>
+    <mat-sidenav>
+        <mat-toolbar>
+            <a class="home-button" routerLink="/">
+              <img class="app-logo" src="/assets/mint.jpg" />
+            </a>
+          </mat-toolbar>
+          <mat-nav-list class="navigation-list">
+            <a
+              mat-list-item
+              class="navigation-item"
+              type="button"
+              aria-label="Toggle sidenav"
+              (click)="randomFunction()"
+            >
+              <mat-icon class="material-icons">menu</mat-icon>
+            </a>
+            <mat-divider class="navigation-divider"></mat-divider>
+            <a
+              class="navigation-item"
+              mat-list-item
+              routerLink="/home/"
+              routerLinkActive="active"
+            >
+             <span class="navigation-item-label">Home</span>
+            </a>
+      
+            <a
+              class="navigation-item"
+              mat-list-item
+              routerLink="/news/"
+              routerLinkActive="active"
+            >
+              <span class="navigation-item-label">News</span>
+            </a>
+            
+        </mat-nav-list>
+      </mat-sidenav>
+        <mat-sidenav-content class="sidenav-content">
+          <div id="header" fxLayout="row">
+            <!-- <div fxFlex="30%">
+              <div *ngIf="(currentCorporate$ | async).customer_code">
+                <button mat-flat-button (click)="openCorporationsList()">
+                  <img
+                    [src]="(currentCorporate$ | async)?.customer_image"
+                    [alt]="(currentCorporate$ | async)?.customer_name"
+                    style="height: 20px;"
+                  />
+                  <span class="ml-1">{{
+                    (currentCorporate$ | async)?.customer_name
+                  }}</span>
+                  <span class="ml-1"
+                    >(ID : {{ (currentCorporate$ | async)?.customer_code }})</span
+                  >
+                </button>
+              </div>
+      
+              <mat-icon *ngIf="!(currentCorporate$ | async).customer_code">
+                <mat-spinner aria-label="Filtering ..." diameter="20" color="dark">
+                </mat-spinner>
+              </mat-icon>
+               </div> -->
+            <div fxFlex="30%" class="has-text-right"></div>
+            <div fxFlex="40%">
+              <div class="header-menu">
+                <span class="mr-1">Welcome</span>
+                <b>Kelly</b>
+                 <button
+                  mat-icon-button
+                  [matMenuTriggerFor]="userMenu"
+                  class="header-menu-button"
+                >
+                  <mat-icon>account_circle</mat-icon>
+                </button>
+                <mat-menu #userMenu="matMenu" xPosition="before">
+                  <button
+                    mat-menu-item
+                    routerLink="/settings/"
+                    routerLinkActive="active"
+                  >
+                    <mat-icon>settings</mat-icon>
+                    Settings
+                  </button>
+                  <mat-divider></mat-divider>
+                  <button mat-menu-item (click)="logout()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    Logout
+                  </button>
+                </mat-menu>
+              </div>
+            </div>
+          </div>
+      
+          <div id="main-ihela-container">
+            <router-outlet></router-outlet>
+          </div>
+        </mat-sidenav-content>
+    
+</mat-sidenav-container>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs>
+      <clipPath id="clip-path">
+        <rect width="324" height="329" fill="none"/>
+      </clipPath>
+      <clipPath id="clip-path-2">
+        <rect width="1164" height="191" fill="none"/>
+      </clipPath>
+      <clipPath id="clip-path-3">
+        <rect width="1209" height="338" fill="none"/>
+      </clipPath>
+      <clipPath id="clip-Web_1920_1">
+        <rect width="1920" height="1080"/>
+      </clipPath>
+    </defs>
+    <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+      <rect width="1920" height="1080" fill="#292929"/>
+      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" transform="translate(20 169)" clip-path="url(#clip-path)">
+        <g transform="translate(-20 -169)">
+          <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(20 169)" fill="#fff" stroke="#707070" stroke-width="1">
+            <rect width="324" height="63" rx="13" stroke="none"/>
+            <rect x="0.5" y="0.5" width="323" height="62" rx="12.5" fill="none"/>
+          </g>
+        </g>
+        <g transform="translate(-20 -86)">
+          <g id="Rectangle_2-2" data-name="Rectangle 2" transform="translate(20 169)" fill="#fff" stroke="#707070" stroke-width="1">
+            <rect width="324" height="63" rx="13" stroke="none"/>
+            <rect x="0.5" y="0.5" width="323" height="62" rx="12.5" fill="none"/>
+          </g>
+        </g>
+        <g transform="translate(-20 -3)">
+          <g id="Rectangle_2-3" data-name="Rectangle 2" transform="translate(20 169)" fill="#fff" stroke="#707070" stroke-width="1">
+            <rect width="324" height="63" rx="13" stroke="none"/>
+            <rect x="0.5" y="0.5" width="323" height="62" rx="12.5" fill="none"/>
+          </g>
+        </g>
+        <g transform="translate(-20 80)">
+          <g id="Rectangle_2-4" data-name="Rectangle 2" transform="translate(20 169)" fill="#fff" stroke="#707070" stroke-width="1">
+            <rect width="324" height="63" rx="13" stroke="none"/>
+            <rect x="0.5" y="0.5" width="323" height="62" rx="12.5" fill="none"/>
+          </g>
+        </g>
+      </g>
+      <line id="Line_1" data-name="Line 1" x2="324" transform="translate(21.5 241.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(377 135)" fill="#504e4e" stroke="#707070" stroke-width="1">
+        <rect width="1517" height="922" rx="22" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1516" height="921" rx="21.5" fill="none"/>
+      </g>
+      <g id="Repeat_Grid_2" data-name="Repeat Grid 2" transform="translate(554 242)" clip-path="url(#clip-path-2)">
+        <g transform="translate(-498 -296)">
+          <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(498 296)" fill="#fff" stroke="#707070" stroke-width="1">
+            <rect width="335" height="191" rx="34" stroke="none"/>
+            <rect x="0.5" y="0.5" width="334" height="190" rx="33.5" fill="none"/>
+          </g>
+        </g>
+        <g transform="translate(-90 -296)">
+          <g id="Rectangle_4-2" data-name="Rectangle 4" transform="translate(498 296)" fill="#fff" stroke="#707070" stroke-width="1">
+            <rect width="335" height="191" rx="34" stroke="none"/>
+            <rect x="0.5" y="0.5" width="334" height="190" rx="33.5" fill="none"/>
+          </g>
+        </g>
+        <g transform="translate(318 -296)">
+          <g id="Rectangle_4-3" data-name="Rectangle 4" transform="translate(498 296)" fill="#fff" stroke="#707070" stroke-width="1">
+            <rect width="335" height="191" rx="34" stroke="none"/>
+            <rect x="0.5" y="0.5" width="334" height="190" rx="33.5" fill="none"/>
+          </g>
+        </g>
+      </g>
+      <text id="Dashboard" transform="translate(1007 531)" fill="#707070" font-size="42" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Dashboard</tspan></text>
+      <text id="Menu_1" data-name="Menu 1" transform="translate(665 345)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Menu 1</tspan></text>
+      <text id="Menu_2" data-name="Menu 2" transform="translate(1102 345)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Menu 2</tspan></text>
+      <text id="Menu_3" data-name="Menu 3" transform="translate(1515 345)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Menu 3</tspan></text>
+      <g id="Repeat_Grid_3" data-name="Repeat Grid 3" transform="translate(520 609)" clip-path="url(#clip-path-3)">
+        <g transform="translate(-520 -609)">
+          <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(520 609)" fill="#151515" stroke="#707070" stroke-width="1">
+            <rect width="546" height="338" rx="35" stroke="none"/>
+            <rect x="0.5" y="0.5" width="545" height="337" rx="34.5" fill="none"/>
+          </g>
+          <text id="Pie_Chart" data-name="Pie Chart" transform="translate(734 786)" fill="#faf5f5" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Pie Chart</tspan></text>
+        </g>
+        <g transform="translate(129 -609)">
+          <g id="Rectangle_5-2" data-name="Rectangle 5" transform="translate(520 609)" fill="#151515" stroke="#707070" stroke-width="1">
+            <rect width="546" height="338" rx="35" stroke="none"/>
+            <rect x="0.5" y="0.5" width="545" height="337" rx="34.5" fill="none"/>
+          </g>
+          <text id="Histogram" transform="translate(734 786)" fill="#faf5f5" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Histogram</tspan></text>
+        </g>
+      </g>
+      <text id="H" transform="translate(1328 825)" fill="none" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">H</tspan></text>
+    </g>
+  </svg> -->
