@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MaterialModule} from '../../shared';
 
 @Component({
   selector: 'app-home',

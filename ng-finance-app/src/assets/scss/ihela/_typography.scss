@@ -1,0 +1,83 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background: $body-background-color;
+  color: #3c4858;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat {
+  &-bg-white {
+    background: #fff !important;
+  }
+
+  &-rounded {
+    border-radius: 4px;
+  }
+
+  &-padding {
+    padding: 15px;
+  }
+}
+
+.is {
+  &-rounded {
+    border-radius: 5px !important;
+  }
+
+  &-help {
+    @extend .has-text-grey !optional;
+    @extend .is-small !optional;
+  }
+
+  &-bordered {
+    border: 1px solid #eee;
+  }
+
+  &-bordered-bottom {
+    border: 0px 0px 1px 0px solid #eee;
+  }
+
+  &-hoverable-bis {
+    .show-on-hover {
+      display: none !important;
+    }
+    &:hover {
+      cursor: pointer;
+      .show-on-hover {
+        display: inline-block !important;
+      }
+      transform: scale(1.05);
+    }
+  }
+
+  &-hoverable {
+    @include transition(all 3s);
+    .show-on-hover {
+      @include transition(all 3s);
+      display: none !important;
+    }
+    &:hover {
+      cursor: pointer;
+      .show-on-hover {
+        display: inline-block !important;
+      }
+    }
+  }
+}
+
+.position {
+  &-top-right {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    @extend .has-background-white !optional;
+  }
+}

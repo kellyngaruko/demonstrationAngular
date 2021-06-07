@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MaterialModule } from '../material/material.module';
+
 import {
   MatBottomSheet,
   MatBottomSheetRef

@@ -1,0 +1,45 @@
+$md-ihelatheme: (
+  50: #f0e0e3,
+  100: #d9b3ba,
+  200: #c0808c,
+  300: #a74d5e,
+  400: #94263c,
+  500: #810019,
+  600: #790016,
+  700: #6e0012,
+  800: #64000e,
+  900: #510008,
+  A100: #ff8488,
+  A200: #ff5156,
+  A400: #ff1e25,
+  A700: #ff040c,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$body-background-color: #e1e1e1ff;
+
+$ihelared-light: #f70000;
+$ihelared: #810019;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+$primary: $ihelared;
+$warning: #edbc37;
+$danger: $ihelared-light;
+$link: $ihelared;

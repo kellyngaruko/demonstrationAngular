@@ -1,0 +1,28 @@
+.print-only,
+.print-only-block {
+  display: none;
+}
+
+@media print {
+  .print-only {
+    display: inline-block;
+  }
+
+  .print-only-block {
+    display: block;
+  }
+
+  .mat-drawer-content {
+    height: auto !important;
+  }
+  .mat-drawer-container {
+    overflow: inherit !important;
+  }
+  perfect-scrollbar {
+    height: auto;
+    max-height: none;
+  }
+  mat-sidenav-container {
+    overflow: inherit !important;
+  }
+}
