@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HomeModule} from './modules/home/home.module'
@@ -12,7 +13,7 @@ import { AuthComponent } from './modules/auth/auth.component';
 import { HomeComponent } from './modules/home/home.component';
 import { StockDisplayComponent } from './shared/stock-display/stock-display.component';
 import { ArticleDisplayComponent } from './shared/article-display/article-display.component';
-import { SharedModule } from './shared';
+import { SharedModule, MaterialModule } from './shared';
 
 @NgModule({
   declarations: [AppComponent
@@ -20,6 +21,12 @@ import { SharedModule } from './shared';
   imports: [
     AppRoutingModule,
     HomeModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FlexLayoutModule,
+    MaterialModule,
+    SharedModule,
     // WatchlistComponent,
     // PortfolioComponent,
     // LayoutComponent,

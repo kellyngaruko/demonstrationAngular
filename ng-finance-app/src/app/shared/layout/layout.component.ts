@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import {
   MatBottomSheet,
@@ -11,7 +11,8 @@ import {
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-
+  @ViewChild('drawer', { static: false })
+  drawer: MatSidenav;
   constructor() { }
 
   ngOnInit(): void {
