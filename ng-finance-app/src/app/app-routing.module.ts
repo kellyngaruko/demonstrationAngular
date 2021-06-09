@@ -34,7 +34,7 @@ const routes: Routes = [
       //   loadChildren:
       //     './modules/app-settings/app-settings-routing.module#AppSettingsRoutingModule'
       // }
-    ],
+   ],
    // canActivate: [AuthGuard]
   }
 ];

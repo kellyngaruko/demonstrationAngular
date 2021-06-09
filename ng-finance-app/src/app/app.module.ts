@@ -8,17 +8,20 @@ import {HomeModule} from './modules/home/home.module'
 import { NewsComponent } from './modules/news/news.component';
 import { WatchlistComponent } from './shared/watchlist/watchlist.component';
 import { PortfolioComponent } from './modules/portfolio/portfolio.component';
-import { LayoutComponent } from './shared/layout/layout.component';
+// import { LayoutComponent } from './shared/layout/layout.component';
 import { AuthComponent } from './modules/auth/auth.component';
 import { HomeComponent } from './modules/home/home.component';
 import { StockDisplayComponent } from './shared/stock-display/stock-display.component';
 import { ArticleDisplayComponent } from './shared/article-display/article-display.component';
-import { SharedModule, MaterialModule } from './shared';
-
+import { SharedModule, MaterialModule } from './shared/';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatSidenavModule} from '@angular/material/sidenav';
 @NgModule({
   declarations: [AppComponent
   ],
   imports: [
+    MatSidenavModule,
     AppRoutingModule,
     HomeModule,
     BrowserModule,
@@ -36,7 +39,8 @@ import { SharedModule, MaterialModule } from './shared';
     // ArticleDisplayComponent,
     SharedModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
