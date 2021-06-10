@@ -554,6 +554,13 @@
     <mat-toolbar class="content-toolbar">
       My finance App
     </mat-toolbar>
-    Main content</mat-drawer-content>
+    <div class= "columns">
+      <div class="column is-8 main-app-content">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="column is-4 contact-info">
+
+      </div>
+    </div>
+  </mat-drawer-content>
 </mat-drawer-container>
-<router-outlet></router-outlet>

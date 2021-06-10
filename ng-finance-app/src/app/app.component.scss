@@ -47,6 +47,28 @@
           color:#03DAC5;
           font-size: 40px;
         }
+        .main-app-content{
+          padding: 15px;
+          margin-top: 15px;
+          margin-left:20px;
+          border-radius: 3%;
+          background-color: black;
+          height: 100vh;
+          width: 70%;
+          display: inline-block;
+        }
+        .contact-info{
+          margin-top: 15px;
+          margin-right: 15px;
+          padding: 15px;
+          border-radius: 5%;
+          background-color: black;
+          height: 500px;
+          width: 20%;
+          float: right;
+          display: inline-flex;
+          flex-direction: column;
+        }
       }
   }
   
