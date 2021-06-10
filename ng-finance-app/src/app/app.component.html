@@ -511,5 +511,39 @@
 
   
 </div> -->
+<mat-drawer-container class="app-container">
+  <mat-drawer class="sidenav" mode="side" opened>
+    <mat-nav-list class="navigation-list">
+       <a
+        class="navigation-item"
+        mat-list-item
+        routerLink="/watchlist/"
+        routerLinkActive="active"
+      >
+        <mat-icon class="material-icons">dashboard</mat-icon
+        ><span class="navigation-item-label">Home</span>
+      </a>
 
+      <a
+        class="navigation-item"
+        mat-list-item
+        routerLink="/news/"
+        routerLinkActive="active"
+      >
+        <mat-icon class="material-icons">credit_card</mat-icon
+        ><span class="navigation-item-label">News</span>
+      </a>
+      <a
+        class="navigation-item"
+        mat-list-item
+        routerLink="/watchlist/"
+        routerLinkActive="active"
+      >
+        <mat-icon class="material-icons">credit_card</mat-icon
+        ><span class="navigation-item-label">Watchlist</span>
+      </a>
+      </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
 <router-outlet></router-outlet>

@@ -4,16 +4,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HomeModule} from './modules/home/home.module'
+import {HomeModule} from './modules/home/home.module';
+import {MaterialModule} from './modules/material';
 import { NewsComponent } from './modules/news/news.component';
-import { WatchlistComponent } from './shared/watchlist/watchlist.component';
+import { WatchlistComponent } from './modules/watchlist/watchlist.component';
 import { PortfolioComponent } from './modules/portfolio/portfolio.component';
 // import { LayoutComponent } from './shared/layout/layout.component';
 import { AuthComponent } from './modules/auth/auth.component';
 import { HomeComponent } from './modules/home/home.component';
-import { StockDisplayComponent } from './shared/stock-display/stock-display.component';
-import { ArticleDisplayComponent } from './shared/article-display/article-display.component';
-import { SharedModule, MaterialModule } from './shared/';
+import { StockDisplayComponent } from './modules/stock-display/stock-display.component';
+import { ArticleDisplayComponent } from './modules/article-display/article-display.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -29,7 +29,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     HttpClientModule,
     FlexLayoutModule,
     MaterialModule,
-    SharedModule,
+    
     // WatchlistComponent,
     // PortfolioComponent,
     // LayoutComponent,
@@ -37,7 +37,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     // HomeComponent,
     // StockDisplayComponent,
     // ArticleDisplayComponent,
-    SharedModule,
+   
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule

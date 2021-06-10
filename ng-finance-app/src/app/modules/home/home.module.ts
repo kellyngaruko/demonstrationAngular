@@ -6,7 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { MaterialModule } from '../../shared/material';
+import { MaterialModule } from '../material';
 
 
 @NgModule({

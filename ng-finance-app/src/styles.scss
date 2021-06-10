@@ -28,7 +28,7 @@ $ihelacorporate-ng-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$ihelacorporate-ng-theme: mat-light-theme(
+$ihelacorporate-ng-theme: mat-dark-theme(
   (
     color: (
       primary: $ihelacorporate-ng-primary,

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './shared/layout';
+
 
 const routes: Routes = [
   // {
@@ -15,15 +15,15 @@ const routes: Routes = [
   //   ],
   //   //canActivate: [NoAuthGuard]
   // },
-  {
-    path: '',
-    component: LayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren:
-          './modules/home/home-routing.module#HomeRoutingModule'
-      },
+  // {
+  //   path: '',
+  //   component: LayoutComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       loadChildren:
+  //         './modules/home/home-routing.module#HomeRoutingModule'
+  //     },
       // {
       //   path: 'operations',
       //   loadChildren:
@@ -34,9 +34,9 @@ const routes: Routes = [
       //   loadChildren:
       //     './modules/app-settings/app-settings-routing.module#AppSettingsRoutingModule'
       // }
-   ],
+   //],
    // canActivate: [AuthGuard]
-  }
+ // }
 ];
 
 @NgModule({
