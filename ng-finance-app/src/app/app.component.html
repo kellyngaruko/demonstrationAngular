@@ -512,7 +512,13 @@
   
 </div> -->
 <mat-drawer-container class="app-container">
+
   <mat-drawer class="sidenav" mode="side" opened>
+  
+      <a class="home-button" >
+        <img class="app-logo" src="../assets/mint.jpg" />
+      </a>
+    
     <mat-nav-list class="navigation-list">
        <a
         class="navigation-item"
@@ -544,6 +550,10 @@
       </a>
       </mat-nav-list>
   </mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
+  <mat-drawer-content class="sidenav-content">
+    <mat-toolbar class="content-toolbar">
+      My finance App
+    </mat-toolbar>
+    Main content</mat-drawer-content>
 </mat-drawer-container>
 <router-outlet></router-outlet>
