@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HomeModule} from './modules/home/home.module';
+import {NewsModule} from './modules/news/news.module';
 import {MaterialModule} from './modules/material';
 import { NewsComponent } from './modules/news/news.component';
 import { WatchlistComponent } from './modules/watchlist/watchlist.component';
@@ -17,6 +18,8 @@ import { ArticleDisplayComponent } from './modules/article-display/article-displ
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { WatchlistModule } from './modules/watchlist/watchlist.module';
+
 @NgModule({
   declarations: [AppComponent
   ],
@@ -24,12 +27,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSidenavModule,
     AppRoutingModule,
     HomeModule,
+    NewsModule,
+    WatchlistModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FlexLayoutModule,
     MaterialModule,
-    
+
     // WatchlistComponent,
     // PortfolioComponent,
     // LayoutComponent,
@@ -37,7 +42,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     // HomeComponent,
     // StockDisplayComponent,
     // ArticleDisplayComponent,
-   
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule

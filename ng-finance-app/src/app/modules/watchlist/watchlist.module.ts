@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { WatchlistRoutingModule } from './watchlist-routing.module';
+import { WatchlistComponent } from './watchlist.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from '../material';
@@ -11,7 +11,7 @@ import { MaterialModule } from '../material';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    WatchlistComponent,
 
   ],
 
@@ -20,8 +20,8 @@ import { MaterialModule } from '../material';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    HomeRoutingModule,
+    WatchlistRoutingModule,
     MaterialModule,
   ]
 })
-export class HomeModule {}
+export class WatchlistModule {}
