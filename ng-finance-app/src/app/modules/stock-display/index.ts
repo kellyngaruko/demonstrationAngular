@@ -1,1 +1,1 @@
-export * from './stock-display.component';
+export * from './stock-display.module';

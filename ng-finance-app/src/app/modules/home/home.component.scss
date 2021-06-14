@@ -1,5 +1,28 @@
-.example-container {
-    width: 100vw;
-    height: 100vh;
+$primary:#03DAC5;
+.container {
     padding: 10px;
+    .stocks-div {
+        float: left;
+        width: 30%;
+    }
+        .stocks-div .stock-div{
+            display: block;
+        }
+        .stocks-div .stock-div .symbol{
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            color: $primary;
+        }
+            .stocks-div .stock-div .symbol:hover{
+                text-decoration: underline;
+            }
+        .stocks-div .stock-div .company-name{
+            font-size: 13px;
+            padding-left: 5px;
+        }
+    .ticker-info-div{
+        float: left;
+        width: 70%;
+    }
 }
