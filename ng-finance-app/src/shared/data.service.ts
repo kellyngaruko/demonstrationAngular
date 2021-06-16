@@ -11,7 +11,13 @@ export class DataService {
       let api = this.api.replace('{0}', ticker);
       
       const result=this.httpClient.get(api)
-      console.log("service", result)
+      console.log("stock service", result)
       return result;
+  }
+  public getNewsInformation(){
+    let api='https://query1.finance.yahoo.com/v8/finance/news/?region=US&lang=en-US&includePrePost=false&interval=2m&range=1d&.tsrc=finance'
+    const result= this.httpClient.get(api)
+    console.log("news service", result)
+    return result
   }
 }
