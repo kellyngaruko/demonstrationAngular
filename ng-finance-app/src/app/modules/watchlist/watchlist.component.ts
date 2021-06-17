@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { StockDisplayComponent} from '../stock-display/stock-display.component'
+
 
 @Component({
   selector: 'app-watchlist',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./watchlist.component.scss']
 })
 export class WatchlistComponent implements OnInit {
+  @ViewChild('stockDisplay', { static: false })
+  stockDisplay: StockDisplayComponent;
 
+  globalStocks = [ 
+    { symbol: 'ES=F', name: 'S&P 500'},
+    { symbol: 'YM=F', name: 'DOW JONES'},
+    { symbol: 'NQ=F', name: 'NASDAQ'},
+    { symbol: 'GC=F', name: 'GOLD'},
+  ];
   constructor() { }
-
-  ngOnInit(): void {
+  selectedStock: string;
+  ngOnInit(){
+      this.selectedStock = '';
   }
-
+  stockClicked(symbol){
+      this.selectedStock = symbol;
+      console.log("clicked", this.selectedStock)
+  }
+  
 }

@@ -24,7 +24,7 @@ export class StockDisplayComponent implements OnChanges {
     console.log("trynna understand", this.stockInfo)
     if(this.ticker && this.ticker !== ''){
       console.log("Second console", this.ticker)
-      this.dataService.getNewsInformation(),
+      this.dataService.getNewsInformation().subscribe(data=>{ console.log("THE NEWS RESULT :", data)}),
         this.subscription = timer(0, 50000)
           .pipe(switchMap(() =>
           
