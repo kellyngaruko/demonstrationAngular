@@ -3,10 +3,19 @@
     <hr>
     <div class="stocks-div">
         <div *ngFor="let stock of globalStocks">
-            <div class="stock-div" (click)="stockClicked(stock.symbol)">
+            <a
+                class="navigation-item"
+                mat-list-item
+                (click)="stockClicked(stock.symbol)"
+                >
                 <span class="symbol">{{ stock.symbol }}</span>
                 <span class="company-name">({{ stock.name }})</span>
-            </div>
+            </a>
+            <!-- <div class="stock-div" (click)="stockClicked(stock.symbol)">
+                <span class="symbol">{{ stock.symbol }}</span>
+                <span class="company-name">({{ stock.name }})</span>
+            </div> -->
+            <mat-divider></mat-divider>
         </div>
     </div>
     <div class="ticker-info-div">

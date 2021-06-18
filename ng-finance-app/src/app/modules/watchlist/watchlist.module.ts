@@ -7,6 +7,7 @@ import { WatchlistComponent } from './watchlist.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from '../material';
+import { StockDisplayModule } from '../stock-display';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { MaterialModule } from '../material';
   ],
 
   imports: [
+    StockDisplayModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,

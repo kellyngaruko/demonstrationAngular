@@ -26,3 +26,16 @@ $primary:#03DAC5;
         width: 70%;
     }
 }
+.navigation-item{
+    margin: 5px;
+    &:hover{
+      color:#03DAC5
+    }
+    .mat-icon{
+      margin-right:10px;
+    }
+    .navigation-item-label{
+      padding-top: 2px;
+      }
+      
+    }
