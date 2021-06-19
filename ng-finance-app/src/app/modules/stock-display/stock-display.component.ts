@@ -9,29 +9,20 @@ import {StockInfo} from '../../models/stock-info'
   templateUrl: './stock-display.component.html',
   styleUrls: ['./stock-display.component.scss']
 })
-export class StockDisplayComponent implements OnChanges {
+export class StockDisplayComponent implements OnInit {
   @Input() ticker: string;
   constructor(private dataService: DataService) { }
 
   stockInfo: StockInfo
-  subscription: Subscription;
-  stockInformation: any;
-
-  ngOnChanges(): void {
-    
-    console.log("IT started", this.ticker,"////")
+subscription: Subscription;
+stockInformation: any;
+ngOnInit(): void {
     this.stockInfo = null;
-    console.log("trynna understand", this.stockInfo)
     if(this.ticker && this.ticker !== ''){
-      console.log("Second console", this.ticker)
-      this.dataService.getNewsInformation().subscribe(data=>{ console.log("THE NEWS RESULT :", data)}),
-        this.subscription = timer(0, 50000)
+        this.subscription = timer(0, 500)
           .pipe(switchMap(() =>
-          
-           this.dataService.getStockInformation(this.ticker)
-           ))
+           this.dataService.getStockInformation(this.ticker)))
                .subscribe(result => {
-                console.log(" Third console", result)
                    let response: any;
                    response = result;
                    if(response.chart && response.chart.result &&
@@ -81,8 +72,8 @@ export class StockDisplayComponent implements OnChanges {
             }
          });
       }
-  }
-  ngOnDestroy(){
+}
+ngOnDestroy(){
     this.stockInformation = null;
     this.subscription.unsubscribe();
   }

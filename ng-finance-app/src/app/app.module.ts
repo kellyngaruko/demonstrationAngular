@@ -20,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { WatchlistModule } from './modules/watchlist/watchlist.module';
-import { NewsDisplayComponent } from './news-display/news-display.component';
+import { NewsDisplayComponent } from './modules/news-display/news-display.component';
 
 @NgModule({
   declarations: [AppComponent, NewsDisplayComponent
