@@ -21,9 +21,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { WatchlistModule } from './modules/watchlist/watchlist.module';
 import { NewsDisplayComponent } from './modules/news-display/news-display.component';
+import { NewsDisplayModule } from './modules/news-display/news-display.module';
 
 @NgModule({
-  declarations: [AppComponent, NewsDisplayComponent
+  declarations: [AppComponent
   ],
   imports: [
     MatSidenavModule,
@@ -31,12 +32,13 @@ import { NewsDisplayComponent } from './modules/news-display/news-display.compon
     HomeModule,
     NewsModule,
     StockDisplayModule,
+    NewsDisplayModule,
     WatchlistModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FlexLayoutModule,
-    MaterialModule,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    MaterialModule,
 
     // WatchlistComponent,
     // PortfolioComponent,

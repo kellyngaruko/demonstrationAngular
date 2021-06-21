@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { StockDisplayComponent} from '../stock-display/stock-display.component'
+import { StockDisplayComponent} from '../stock-display/stock-display.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('stockDisplay', { static: false })
   stockDisplay: StockDisplayComponent;
 
-  globalStocks = [ 
+  globalStocks = [
     { symbol: 'ES=F', name: 'S&P 500'},
     { symbol: 'YM=F', name: 'DOW JONES'},
     { symbol: 'NQ=F', name: 'NASDAQ'},
@@ -17,12 +17,12 @@ export class HomeComponent implements OnInit {
   ];
   constructor() { }
   selectedStock: string;
-  ngOnInit(){
+  ngOnInit(): void{
       this.selectedStock = '';
   }
-  stockClicked(symbol){
+  stockClicked(symbol):void{
       this.selectedStock = symbol;
-      console.log("clicked", this.selectedStock)
+      console.log('clicked', this.selectedStock);
   }
-  
+
 }

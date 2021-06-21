@@ -1,1 +1,17 @@
-<p>news-display works!</p>
+<div *ngIf="newsDetails" >
+    <h4>{{ newsDetails.title }}</h4>
+    
+    <div>
+        <span >
+            {{ newsDetails.author}}</span>
+        <span>
+            {{ newsDetails.pubDate}}
+        </span>
+        <span >
+            ({{ newsDetails.provider}})
+        </span>
+        <a>{{newsDetails.canonicalUrl}}</a>
+    </div>
+    <hr>
+    
+</div>
