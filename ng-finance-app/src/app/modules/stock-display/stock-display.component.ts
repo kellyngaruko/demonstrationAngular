@@ -75,6 +75,6 @@ ngOnInit(): void {
 }
 ngOnDestroy(){
     this.stockInformation = null;
-    this.subscription.unsubscribe();
+   // this.subscription.unsubscribe();
   }
 }
