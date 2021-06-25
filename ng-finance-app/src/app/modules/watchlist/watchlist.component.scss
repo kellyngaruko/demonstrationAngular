@@ -3,19 +3,19 @@ $primary:#03DAC5;
     padding: 10px;
     .stocks-div {
         float: left;
-        width: 30%;
+        width: 25%;
     }
         .stocks-div .stock-div{
             display: block;
         }
         .stocks-div .stock-div .symbol{
             font-weight: bold;
-            font-size: 14px;
+            font-size: 10px;
             cursor: pointer;
             color: $primary;
         }
             .stocks-div .stock-div .symbol:hover{
-                text-decoration: underline;
+                color:rgb(172, 255, 172)
             }
         .stocks-div .stock-div .company-name{
             font-size: 13px;
@@ -29,7 +29,8 @@ $primary:#03DAC5;
 .navigation-item{
     margin: 5px;
     &:hover{
-      color:#03DAC5
+      color:#7df3a4;
+      cursor: pointer
     }
     .mat-icon{
       margin-right:10px;

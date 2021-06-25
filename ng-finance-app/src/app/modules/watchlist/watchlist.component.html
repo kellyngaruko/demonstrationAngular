@@ -2,14 +2,15 @@
     <h3>Your Watchlist</h3>
     <hr>
     <div class="stocks-div">
-        <div *ngFor="let stock of globalStocks">
+        <div *ngFor="let stock of globalStocks" class= "stock-div">
             <a
                 class="navigation-item"
                 mat-list-item
                 (click)="stockClicked(stock.symbol)"
                 >
-                <span class="symbol">{{ stock.symbol }}</span>
-                <span class="company-name">({{ stock.name }})</span>
+                <span class="company-name">{{ stock.name }}</span>
+                <span class="symbol">({{ stock.symbol }})</span>
+                
             </a>
             <!-- <div class="stock-div" (click)="stockClicked(stock.symbol)">
                 <span class="symbol">{{ stock.symbol }}</span>
