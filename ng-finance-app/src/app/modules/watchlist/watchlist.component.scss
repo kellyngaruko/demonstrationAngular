@@ -1,12 +1,29 @@
-$primary:#03DAC5;
+$primary:rgb(172, 255, 172);
 .container {
+    .title{
+        font-size: 40px;
+        color:rgb(172, 255, 172);
+        text-align: center;
+        
+    }
     padding: 10px;
     .stocks-div {
         float: left;
         width: 25%;
+       
     }
         .stocks-div .stock-div{
             display: block;
+            border-radius: 5px;
+            padding-left: 5px;
+            &:hover{
+                color:$primary;
+                background-color: rgb(32, 47, 32);
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                transform: translateY(-3px); 
+              }
+            
         }
         .stocks-div .stock-div .symbol{
             font-weight: bold;
@@ -15,23 +32,26 @@ $primary:#03DAC5;
             color: $primary;
         }
             .stocks-div .stock-div .symbol:hover{
-                color:rgb(172, 255, 172)
+                transform: translateY(-3px); ;
             }
         .stocks-div .stock-div .company-name{
-            font-size: 13px;
-            padding-left: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            display: block;
         }
     .ticker-info-div{
-        float: left;
+        margin-left: 8px;
+        height: 100vh;
+        padding: 15px;
+        border-radius: 5px;
+        border: 0.01px solid $primary;
+        float: right;
         width: 70%;
     }
 }
 .navigation-item{
     margin: 5px;
-    &:hover{
-      color:#7df3a4;
-      cursor: pointer
-    }
+    
     .mat-icon{
       margin-right:10px;
     }

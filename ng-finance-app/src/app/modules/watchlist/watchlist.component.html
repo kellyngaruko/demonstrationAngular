@@ -1,12 +1,12 @@
 <div class="container">
-    <h3>Your Watchlist</h3>
+    <h1 class="title">Your Watchlist</h1>
     <hr>
     <div class="stocks-div">
-        <div *ngFor="let stock of globalStocks" class= "stock-div">
+        <div *ngFor="let stock of globalStocks" class= "stock-div" (click)="stockClicked(stock.symbol)">
             <a
                 class="navigation-item"
                 mat-list-item
-                (click)="stockClicked(stock.symbol)"
+                
                 >
                 <span class="company-name">{{ stock.name }}</span>
                 <span class="symbol">({{ stock.symbol }})</span>
@@ -16,7 +16,7 @@
                 <span class="symbol">{{ stock.symbol }}</span>
                 <span class="company-name">({{ stock.name }})</span>
             </div> -->
-            <mat-divider></mat-divider>
+            <!-- <mat-divider></mat-divider> -->
         </div>
     </div>
     <div class="ticker-info-div">
